@@ -18,18 +18,17 @@ struct RecipeDetailView: View {
             
             Image(recipe.image)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
             
             // MARK: Ingredients
             
             VStack(alignment: .leading) {
                 Text("Ingredients:")
                     .font(.headline)
-                    .multilineTextAlignment(.center)
                     .padding(.leading, 104.831)
                 
-                ForEach(recipe.ingredients, id: \.self) { item in
-                    Text("• " + item)
+                ForEach(recipe.ingredients) { item in
+                    Text("• \(item.name)")
                         .font(.body)
                         .padding(.bottom, -0.32)
                 }
