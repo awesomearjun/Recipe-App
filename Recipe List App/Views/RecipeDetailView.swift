@@ -14,39 +14,41 @@ struct RecipeDetailView: View {
     var body: some View {
         ScrollView {
             
-            // MARK: Recipe Image
-            
-            Image(recipe.image)
-                .resizable()
-                .scaledToFill()
-            
-            // MARK: Ingredients
-            
             VStack(alignment: .leading) {
-                Text("Ingredients:")
-                    .font(.headline)
-                    .padding(.leading, 104.831)
+                // MARK: Recipe Image
                 
-                ForEach(recipe.ingredients) { item in
-                    Text("• \(item.name)")
-                        .font(.body)
-                        .padding(.bottom, -0.32)
+                Image(recipe.image)
+                    .resizable()
+                    .scaledToFill()
+                
+                // MARK: Ingredients
+                
+                VStack(alignment: .leading) {
+                    Text("Ingredients:")
+                        .font(.headline)
+                        .padding([.bottom, .top], 5)
+                    
+                    ForEach(recipe.ingredients) { item in
+                        Text("• \(item.name)")
+                            .font(.body)
+                            .padding(.bottom, -0.32)
+                    }
                 }
-            }
-            .padding(.horizontal)
-            
-            // MARK: Divider:
-            Divider()
-            
-            // MARK: Directions
-            VStack(alignment: .leading) {
-                Text("Directions:")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
-                    .padding(.leading, 167.603)
-                ForEach(0...recipe.directions.count-1, id: \.self) { item in
-                    Text("\(String(item + 1)). \(recipe.directions[item])")
-                        .padding(.bottom, 5)
+                .padding(.horizontal)
+                
+                // MARK: Divider:
+                Divider()
+                
+                // MARK: Directions
+                VStack(alignment: .leading) {
+                    Text("Directions:")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                        .padding(.leading, 167.603)
+                    ForEach(0...recipe.directions.count-1, id: \.self) { item in
+                        Text("\(String(item + 1)). \(recipe.directions[item])")
+                            .padding(.bottom, 5)
+                    }
                 }
             }
         }
