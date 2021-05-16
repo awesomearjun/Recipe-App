@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10BC3922651AE5200F28966 /* Launch Screen Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10BC3912651AE5200F28966 /* Launch Screen Test.storyboard */; };
 		E19E8244264C32A6007CF0AF /* ReceipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19E8243264C32A6007CF0AF /* ReceipeFeaturedView.swift */; };
 		E1A12A512650A1E000BF032C /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A12A502650A1E000BF032C /* Rational.swift */; };
+		E1A12A5326518ADE00BF032C /* RecipeHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A12A5226518ADE00BF032C /* RecipeHighlights.swift */; };
 		E1A4C937263F234600AEA06C /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4C936263F234600AEA06C /* RecipeDetailView.swift */; };
 		E1EE41D7263B947500A038F6 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE41D6263B947500A038F6 /* Recipe.swift */; };
 		E1EE41D9263B95E300A038F6 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE41D8263B95E300A038F6 /* RecipeModel.swift */; };
@@ -23,8 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E10BC3912651AE5200F28966 /* Launch Screen Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen Test.storyboard"; sourceTree = "<group>"; };
 		E19E8243264C32A6007CF0AF /* ReceipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeFeaturedView.swift; sourceTree = "<group>"; };
 		E1A12A502650A1E000BF032C /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
+		E1A12A5226518ADE00BF032C /* RecipeHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHighlights.swift; sourceTree = "<group>"; };
 		E1A4C936263F234600AEA06C /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		E1EE41D6263B947500A038F6 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = SOURCE_ROOT; };
 		E1EE41D8263B95E300A038F6 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeModel.swift; path = "Recipe List App/Models/RecipeModel.swift"; sourceTree = SOURCE_ROOT; };
@@ -66,6 +70,7 @@
 				E1A4C936263F234600AEA06C /* RecipeDetailView.swift */,
 				E1F7500626482AE9004C3CE4 /* RecipeTabView.swift */,
 				E19E8243264C32A6007CF0AF /* ReceipeFeaturedView.swift */,
+				E1A12A5226518ADE00BF032C /* RecipeHighlights.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 		E1F7F9DE262C5708006150FB = {
 			isa = PBXGroup;
 			children = (
+				E10BC3912651AE5200F28966 /* Launch Screen Test.storyboard */,
 				E1F7F9E9262C5708006150FB /* Recipe List App */,
 				E1F7F9E8262C5708006150FB /* Products */,
 			);
@@ -204,6 +210,7 @@
 				E1F7F9F2262C5709006150FB /* Preview Assets.xcassets in Resources */,
 				E1F7500B26487917004C3CE4 /* recipes.json in Resources */,
 				E1F7F9EF262C5709006150FB /* Assets.xcassets in Resources */,
+				E10BC3922651AE5200F28966 /* Launch Screen Test.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +226,7 @@
 				E1EE41D9263B95E300A038F6 /* RecipeModel.swift in Sources */,
 				E1F7F9ED262C5708006150FB /* RecipeListView.swift in Sources */,
 				E1F7500D264879EC004C3CE4 /* Ingredient.swift in Sources */,
+				E1A12A5326518ADE00BF032C /* RecipeHighlights.swift in Sources */,
 				E1F7F9EB262C5708006150FB /* Recipe_List_App.swift in Sources */,
 				E1EE41DB263B97A900A038F6 /* DataService.swift in Sources */,
 				E1A12A512650A1E000BF032C /* Rational.swift in Sources */,
@@ -351,8 +359,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Recipe List App/Recipe List App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Recipe List App/Preview Content\"";
+				DEVELOPMENT_TEAM = U689H2JL3S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Recipe List App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -362,6 +372,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arjunp.Recipe-List-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,8 +383,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Recipe List App/Recipe List App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Recipe List App/Preview Content\"";
+				DEVELOPMENT_TEAM = U689H2JL3S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Recipe List App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -383,6 +396,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arjunp.Recipe-List-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
