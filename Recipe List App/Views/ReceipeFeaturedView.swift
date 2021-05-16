@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReceipeFeaturedView: View {
     @EnvironmentObject var model:RecipeModel
+    @State var isDetailViewShowing = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -22,18 +23,26 @@ struct ReceipeFeaturedView: View {
                 TabView {
                     ForEach(0..<model.recipes.count) { index in
                         if model.recipes[index].featured == true {
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                
-                                VStack(spacing: 0) {
-                                    Image(model.recipes[index].image)
-                                        .resizable()
-                                        .clipped()
-                                        .aspectRatio(contentMode: .fill)
-                                    Text(model.recipes[index].name)
-                                        .padding(5)
+                            Button(action: {
+                                self.isDetailViewShowing = true
+                            }, label: {
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.white)
+                                    
+                                    VStack(spacing: 0) {
+                                        Image(model.recipes[index].image)
+                                            .resizable()
+                                            .clipped()
+                                            .aspectRatio(contentMode: .fill)
+                                        Text(model.recipes[index].name)
+                                            .foregroundColor(.black)
+                                            .padding(5)
+                                    }
                                 }
+                            })
+                            .sheet(isPresented: $isDetailViewShowing) {
+                                RecipeDetailView(recipe: model.recipes[index])
                             }
                             .frame(width: geo.size.width - 40, height: geo.size.height - 100, alignment: .center)
                             .cornerRadius(10)
